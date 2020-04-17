@@ -7,5 +7,7 @@ public class MainTest {
 	public static void main(String [] args) {
 		System.out.println(PropertyLoader.getProperty(Constants.BROWSER));
 		System.out.println(PropertyLoader.getProperty(Constants.ENVIRONMENT));
+		
+		
 	}
 }
