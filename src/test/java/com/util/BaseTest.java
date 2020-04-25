@@ -1,5 +1,7 @@
 package com.util;
 
+import java.util.HashMap;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -7,11 +9,15 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import com.data.Constants;
+import com.data.FlightDescriptionSingleton;
 import com.data.PropertyLoader;
+import com.vo.FlightDescription;
 
 public class BaseTest {
 
 	protected WebDriver driver;
+	public HashMap<String, FlightDescription> testData = FlightDescriptionSingleton.getFlightDescriptionSingleton();
+	
 	
 	public BaseTest() {
 		
@@ -30,27 +36,19 @@ public class BaseTest {
 			
 		default:
 		}
+		
+
 	}
 	
-	
 	private String getDefaultBrowser() {
-		return PropertyLoader.getProperty(Constants.DEFAUKT_BROWSER);
+		return PropertyLoader.getProperty(Constants.DEFAULT_BROWSER);
 	}
 	
 	@BeforeMethod
 	public void initialize() {
 		System.out.println(">>>>>Initializing driver from BaseTest<<<<<");
 	}
-	@AfterMethod
-	public void tearDown() {
-		driver.close();
-		driver.quit();
-		System.out.println(">>>>>Finalizing driver<<<<<");
-		try {
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
+
 	
 	
 }
