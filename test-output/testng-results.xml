@@ -1,130 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="1" ignored="0" total="3" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="27630" started-at="2020-04-29T18:01:20 MDT" finished-at="2020-04-29T18:01:48 MDT">
+  <suite name="Default suite" duration-ms="25138" started-at="2020-05-04T17:21:55 MDT" finished-at="2020-05-04T17:22:21 MDT">
     <groups>
     </groups>
-    <test name="Test" duration-ms="27630" started-at="2020-04-29T18:01:20 MDT" finished-at="2020-04-29T18:01:48 MDT">
-      <class name="com.regression.Test_1">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.regression.Test_1@72e34f77]" name="beforeMethod" is-config="true" duration-ms="271" started-at="2020-04-29T18:01:25 MDT" finished-at="2020-04-29T18:01:25 MDT">
+    <test name="Default test" duration-ms="25138" started-at="2020-05-04T17:21:55 MDT" finished-at="2020-05-04T17:22:21 MDT">
+      <class name="com.regression.Test_3">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.regression.Test_3@1c55f277]" name="beforeMethod" is-config="true" duration-ms="287" started-at="2020-05-04T17:21:56 MDT" finished-at="2020-05-04T17:21:56 MDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="f()[pri:0, instance:com.regression.Test_1@72e34f77]" name="f" duration-ms="21453" started-at="2020-04-29T18:01:25 MDT" finished-at="2020-04-29T18:01:46 MDT">
+        <test-method status="PASS" signature="f()[pri:0, instance:com.regression.Test_3@1c55f277]" name="f" duration-ms="22462" started-at="2020-05-04T17:21:56 MDT" finished-at="2020-05-04T17:22:18 MDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method status="PASS" signature="AfterMethod()[pri:0, instance:com.regression.Test_1@72e34f77]" name="AfterMethod" is-config="true" duration-ms="1831" started-at="2020-04-29T18:01:46 MDT" finished-at="2020-04-29T18:01:48 MDT">
+        <test-method status="PASS" signature="AfterMethod()[pri:0, instance:com.regression.Test_3@1c55f277]" name="AfterMethod" is-config="true" duration-ms="2319" started-at="2020-05-04T17:22:18 MDT" finished-at="2020-05-04T17:22:21 MDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterMethod -->
-      </class> <!-- com.regression.Test_1 -->
-      <class name="com.regression.Flight_Test_Singleton">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.regression.Flight_Test_Singleton@6fa590ba]" name="beforeMethod" is-config="true" duration-ms="361" started-at="2020-04-29T18:01:21 MDT" finished-at="2020-04-29T18:01:21 MDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="SKIP" signature="h()[pri:0, instance:com.regression.Flight_Test_Singleton@6fa590ba]" name="h" duration-ms="7" started-at="2020-04-29T18:01:21 MDT" finished-at="2020-04-29T18:01:21 MDT">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[This is the exception]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: This is the exception
-at com.regression.Flight_Test_Singleton.h(Flight_Test_Singleton.java:17)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- h -->
-        <test-method status="PASS" signature="AfterMethod()[pri:0, instance:com.regression.Flight_Test_Singleton@6fa590ba]" name="AfterMethod" is-config="true" duration-ms="1764" started-at="2020-04-29T18:01:21 MDT" finished-at="2020-04-29T18:01:23 MDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterMethod -->
-      </class> <!-- com.regression.Flight_Test_Singleton -->
-      <class name="com.regression.Flight_Test_2">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.regression.Flight_Test_2@6e9319f]" name="beforeMethod" is-config="true" duration-ms="269" started-at="2020-04-29T18:01:23 MDT" finished-at="2020-04-29T18:01:23 MDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="g()[pri:0, instance:com.regression.Flight_Test_2@6e9319f]" name="g" duration-ms="4" started-at="2020-04-29T18:01:23 MDT" finished-at="2020-04-29T18:01:23 MDT">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[This method is failed manually]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: This method is failed manually
-at org.testng.Assert.fail(Assert.java:97)
-at com.regression.Flight_Test_2.g(Flight_Test_2.java:26)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- g -->
-        <test-method status="PASS" signature="AfterMethod()[pri:0, instance:com.regression.Flight_Test_2@6e9319f]" name="AfterMethod" is-config="true" duration-ms="1554" started-at="2020-04-29T18:01:23 MDT" finished-at="2020-04-29T18:01:25 MDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterMethod -->
-      </class> <!-- com.regression.Flight_Test_2 -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- com.regression.Test_3 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

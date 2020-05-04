@@ -9,7 +9,7 @@ import org.testng.asserts.SoftAssert;
 import com.pages.MainPage;
 import com.util.BaseTest;
 
-public class Test_1 extends BaseTest {
+public class Test_2 extends BaseTest {
 	
 	@Test
 	public void f() {
@@ -22,7 +22,7 @@ public class Test_1 extends BaseTest {
 		try {
 			Thread.sleep(1000);
 
-			Assert.assertEquals(mainPage.setRadioButton(data.getTYPE()), true, "This radio option "+ data.getTYPE()+" does not exist");
+			Assert.assertEquals(mainPage.setRadioButton(data.getTYPE()), true, "This radio option "+data.getTYPE()+" does not exist");
 
 			Assert.assertEquals(mainPage.writeOrigin(data.getFROM()), true, "Failed click on Origin");
 			

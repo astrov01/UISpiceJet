@@ -9,7 +9,7 @@ import org.testng.asserts.SoftAssert;
 import com.pages.MainPage;
 import com.util.BaseTest;
 
-public class Test_1 extends BaseTest {
+public class Test_3 extends BaseTest {
 	
 	@Test
 	public void f() {
@@ -34,6 +34,9 @@ public class Test_1 extends BaseTest {
 			Assert.assertEquals(mainPage.clickAddInfant(Integer.parseInt(data.getINFANT())),  true, "Error after add adults");
 			Thread.sleep(6000);
 			
+			//Assert.assertEquals(mainPage.clickSearch(), true, "Failed after click on search button");
+			//Thread.sleep(8000);
+
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
