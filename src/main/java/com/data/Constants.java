@@ -8,6 +8,8 @@ public class Constants {
 	public static final Constants CHROME = new Constants("CHROME");
 	public static final Constants FIREFOX = new Constants("FIREFOX");
 	public static final Constants DEFAULT_BROWSER = new Constants("DEFAULT_BROWSER");
+	public static final Constants REPORT_PATH = new Constants("REPORT_PATH");
+	public static final Constants REPORT_NAME = new Constants("REPORT_NAME");
 
 	
 	private String name;
