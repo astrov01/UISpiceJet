@@ -1,7 +1,6 @@
 package com.data;
 
 import java.util.HashMap;
-
 import com.vo.Report;
 
 public class ReportSingleton {

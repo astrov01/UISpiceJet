@@ -41,9 +41,7 @@ public class MainPage {
 	WebElement btn_addInfant;
 
 	public MainPage(WebDriver driver) {
-
 		PageFactory.initElements(driver, this);
-
 	}
 
 	public boolean setRadioButton(String option) {
@@ -139,18 +137,6 @@ public class MainPage {
 		} catch (Exception e) {
 			return false;
 		}
-	}
-	
-	public boolean clickSearch() {
-		boolean result = false;
-		
-		try {
-			btn_search.click();
-			result = true;
-		} catch (Exception e) {
-			return false;
-		}
-		return result;
 	}
 
 }

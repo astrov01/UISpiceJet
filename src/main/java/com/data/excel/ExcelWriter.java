@@ -14,7 +14,6 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import com.data.Constants;
 import com.data.PropertyLoader;
-import com.vo.IExcelWriter;
 
 public class ExcelWriter {
 	
@@ -42,7 +41,15 @@ public class ExcelWriter {
 				
 				for(int j = 0; j < values.length; j++) {
 					Cell cell = dataRow.createCell(j);
-					cell.setCellValue(values[j].toString());
+					String value;
+					
+					try {
+						value = values[j].toString();
+					} catch (NullPointerException e) {
+						value = "";
+					}
+					
+					cell.setCellValue(value);
 				}
 			}
 

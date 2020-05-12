@@ -1,53 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="23648" started-at="2020-05-06T16:52:55 MDT" finished-at="2020-05-06T16:53:19 MDT">
+  <suite name="Command line suite" duration-ms="12823" started-at="2020-05-12T17:42:39 MDT" finished-at="2020-05-12T17:42:52 MDT">
     <groups>
     </groups>
-    <test name="Test" duration-ms="23648" started-at="2020-05-06T16:52:55 MDT" finished-at="2020-05-06T16:53:19 MDT">
-      <class name="com.regression.Test_2">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.regression.Test_2@c65a5ef]" name="beforeMethod" is-config="true" duration-ms="444" started-at="2020-05-06T16:52:56 MDT" finished-at="2020-05-06T16:52:56 MDT">
+    <test name="Command line test" duration-ms="12823" started-at="2020-05-12T17:42:39 MDT" finished-at="2020-05-12T17:42:52 MDT">
+      <class name="com.test.regression.Test_01">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.regression.Test_01@1643d68f]" name="beforeMethod" is-config="true" duration-ms="2243" started-at="2020-05-12T17:42:39 MDT" finished-at="2020-05-12T17:42:42 MDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="f()[pri:0, instance:com.regression.Test_2@c65a5ef]" name="f" duration-ms="18598" started-at="2020-05-06T16:52:56 MDT" finished-at="2020-05-06T16:53:15 MDT">
+        <test-method status="FAIL" signature="f()[pri:0, instance:com.test.regression.Test_01@1643d68f]" name="f" duration-ms="9238" started-at="2020-05-12T17:42:42 MDT" finished-at="2020-05-12T17:42:51 MDT">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at com.test.regression.Test_01.f(Test_01.java:20)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at com.testng.TestRunner.main(TestRunner.java:46)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method status="PASS" signature="AfterMethod()[pri:0, instance:com.regression.Test_2@c65a5ef]" name="AfterMethod" is-config="true" duration-ms="2879" started-at="2020-05-06T16:53:15 MDT" finished-at="2020-05-06T16:53:17 MDT">
+        <test-method status="PASS" signature="AfterMethod()[pri:0, instance:com.test.regression.Test_01@1643d68f]" name="AfterMethod" is-config="true" duration-ms="1306" started-at="2020-05-12T17:42:51 MDT" finished-at="2020-05-12T17:42:52 MDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterMethod -->
-      </class> <!-- com.regression.Test_2 -->
-      <class name="com.regression.Test_1">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.regression.Test_1@8a589a2]" name="beforeMethod" is-config="true" duration-ms="441" started-at="2020-05-06T16:52:56 MDT" finished-at="2020-05-06T16:52:56 MDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="f()[pri:0, instance:com.regression.Test_1@8a589a2]" name="f" duration-ms="21016" started-at="2020-05-06T16:52:56 MDT" finished-at="2020-05-06T16:53:17 MDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- f -->
-        <test-method status="PASS" signature="AfterMethod()[pri:0, instance:com.regression.Test_1@8a589a2]" name="AfterMethod" is-config="true" duration-ms="2063" started-at="2020-05-06T16:53:17 MDT" finished-at="2020-05-06T16:53:19 MDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterMethod -->
-      </class> <!-- com.regression.Test_1 -->
-      <class name="com.regression.Test_3">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.regression.Test_3@6b5176f2]" name="beforeMethod" is-config="true" duration-ms="536" started-at="2020-05-06T16:52:56 MDT" finished-at="2020-05-06T16:52:56 MDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="f()[pri:0, instance:com.regression.Test_3@6b5176f2]" name="f" duration-ms="19227" started-at="2020-05-06T16:52:56 MDT" finished-at="2020-05-06T16:53:15 MDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- f -->
-        <test-method status="PASS" signature="AfterMethod()[pri:0, instance:com.regression.Test_3@6b5176f2]" name="AfterMethod" is-config="true" duration-ms="2863" started-at="2020-05-06T16:53:15 MDT" finished-at="2020-05-06T16:53:18 MDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterMethod -->
-      </class> <!-- com.regression.Test_3 -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- com.test.regression.Test_01 -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
 </testng-results>

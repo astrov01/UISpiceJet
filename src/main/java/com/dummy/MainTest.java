@@ -1,73 +1,65 @@
 package com.dummy;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.poi.ss.usermodel.*;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.json.JSONArray;
-import org.json.JSONObject;
-import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.testng.TestNG;
 
-import com.data.Constants;
-import com.data.PropertyLoader;
-import com.data.excel.ExcelReader;
 import com.data.util.DataParser;
-import com.vo.FlightDescription;
-import com.data.ExcelFile;
+import com.gurock.testrail.APIClient;
+import com.gurock.testrail.APIException;
+import com.vo.TestRuns;
 
 public class MainTest {
-	public static void main(String [] args) throws IOException {
+
+public static void main(String[] args) throws InvalidFormatException, IOException {
 		
-		/*
-		ExcelFile excelfile = new ExcelFile(null);
+		APIClient call = new APIClient("https://gammapartners.testrail.net/");
 		
-		//excelfile.getText();
+		call.setUser("pgarcia@pkglobal.com");
+		call.setPassword("Q5IOKL.7AiUQqcyFBV2Y-ZyUK.xG1PCGsI1F39G9L");
+		String response = "";
+		//JSONArray array = null; 
 		
-		excelfile.toString();
+		try {
+			response = call.sendGet("get_tests/1331").toString();
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (APIException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
-		*/
+		//System.out.println(response);
 		
-		/*
-		JSONArray array = new JSONArray();
-		JSONObject object = new JSONObject();
-		JSONObject object2 = new JSONObject();
+		List<TestRuns> runList = new ArrayList<TestRuns>();
 		
-		object.put("Llave", "Value");
-		object.put("Llave 2", "Value 2");
+		runList = DataParser.parseJson(response, TestRuns.class);
 		
-		object2.put("Llave Object 2", "Valor Object 2");
+		runList.stream().forEach(System.out::println);
 		
-		array.put(object2);
+		TestNG objeto = new TestNG();
 		
-		array.put(object);
+		Class [] classList;
 		
-		System.out.println(array.toString(1));
+		String path = "com.regression";
 		
-		*/
-		
-		Workbook wBook = null;
-		InputStream file = new FileInputStream(PropertyLoader.getProperty(Constants.DATA_FILE));
-			wBook = new XSSFWorkbook(file);
+		for (int i = 0; i < runList.size(); i++) {
+			runList.get(i).getTitle();
 			
-			Sheet wSheet = wBook.getSheetAt(0);
-			
-			for (int i = 0; i < wSheet.getLastRowNum(); i++) {
-				String json = ExcelReader.getDataInJsonFormat(wSheet);
-				
-				List<FlightDescription> lista = DataParser.parseJson(json, FlightDescription.class);
-			
-				System.out.println(lista.get(i).toString());
-			}
-			
-			
+		}
+		
+	}
+	
+
+	//public static Class [] addClassToClassArray(Class clazz, Class [] classArray) {
 		
 		
 	}
-}
